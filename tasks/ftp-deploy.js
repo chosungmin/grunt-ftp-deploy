@@ -205,7 +205,8 @@ module.exports = function (grunt) {
     currPath = inPath;
     var files = toTransfer[inPath];
 
-    var remotePath = path.normalize(path.join('/', remoteRoot, inPath));
+    // var remotePath = path.normalize(path.join('/', remoteRoot, inPath));
+    var remotePath = path.normalize(path.join('/', remoteRoot, inPath)).replace(/\\/gi, '/');
     ftpCwd(remotePath, function (err) {
       ftpLs(remotePath, function (err, res) {
         if (err) {

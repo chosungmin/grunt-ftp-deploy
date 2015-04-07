@@ -4,13 +4,16 @@ module.exports = function (grunt) {
     'ftp-deploy': {
       build: {
         auth: {
-          host: 'localhost',
-          port: 3334,
-          authKey: 'key1',
-          authPath: './test/.ftpconfig'
+          host: '',
+          port: ,
+          authKey: 'key1'
         },
-        src: './test/fixtures/',
-        dest: './test/tmp'
+        src: 'test/app',
+        dest: '/users/chosungmin/test/',
+        exclusions: ['**/.DS_Store', '**/Thumbs.db', '**/*.psd', 'html', 'html_au', 'i18n', 'sass', 'src', 'test', '**/.*', '**/*.json', '**/CNAME', '**/*.md','bower_components', '**/spr_*/**/*'],
+        forceVerbose : false,
+        forceUpload : false,
+        syncMode : true
       }
     },
     simplemocha: {

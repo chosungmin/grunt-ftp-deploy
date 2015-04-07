@@ -5,7 +5,7 @@ module.exports = function (grunt) {
       build: {
         auth: {
           host: '',
-          port: ,
+          port: 21,
           authKey: 'key1'
         },
         src: 'test/app',
